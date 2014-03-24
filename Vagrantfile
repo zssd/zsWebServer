@@ -2,7 +2,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.hostname = "zsWebServer"
 
-  config.vm.box = "Server2012R2_2"
+  config.vm.box = "Server2012R2"
   config.vm.box_url = ""
   config.vm.guest = :windows
   config.vm.boot_timeout = 600
