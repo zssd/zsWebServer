@@ -27,7 +27,7 @@ Vagrant.configure("2") do |config|
   #config.winrm.host = "33.33.33.10"
 
   config.vm.provision :chef_solo do |chef|
-    chef.cookbooks_path = "c:/users/nb7669/src/zs_associates/zssd/cookbooks/"
+    chef.cookbooks_path = ""
     chef.log_level = :debug
     chef.run_list = [
         "recipe[zsWebServer]",
