@@ -22,8 +22,8 @@ Vagrant.configure("2") do |config|
   # Port forward WinRM and RDP
   #config.vm.network :forwarded_port, guest: 3389, host: 3389
   config.vm.network :forwarded_port, guest: 5985, host: 5985, id: "winrm", auto_correct: true
-  config.winrm.username = "vagrant" #Administrator"
-  config.winrm.password = "vagrant" #"P@ssw0rd"
+  config.winrm.username = "vagrant"
+  config.winrm.password = "vagrant"
   #config.winrm.host = "33.33.33.10"
 
   config.vm.provision :chef_solo do |chef|
