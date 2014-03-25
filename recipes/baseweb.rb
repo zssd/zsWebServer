@@ -9,4 +9,4 @@
 
 # INSTALL BGINFO
 log "Including BG Info"
-include_recipe "BGINFO::default"
+include_recipe "bginfo::default"
