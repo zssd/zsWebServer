@@ -6,10 +6,10 @@ Vagrant.configure("2") do |config|
   # options are documented and commented below. For a complete reference,
   # please see the online documentation at vagrantup.com.
 
-  config.vm.hostname = "w2k12test-berkshelf"
+  config.vm.hostname = "w2k12r2-berkshelf"
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "w2k12Eval"
+  config.vm.box = "w2k12r2"
   config.vm.guest = :windows
   config.winrm.timeout = 600
   config.winrm.username = "vagrant"
@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
-  config.vm.box_url = "https://drive.google.com/a/zsassociates.com/file/d/0B3MisJTvTqQ9bUxPWWxUT0dRd0E"
+  config.vm.box_url = "file://ev-fs01.zs.local/SDThirdPartyInstalls/Vagrant/Images/w2k12r2.box"
 
   # Ensure that all networks are set to private
   config.windows.set_work_network = true
@@ -48,7 +48,7 @@ Vagrant.configure("2") do |config|
   config.vm.provider :virtualbox do |vb|
     # Don't boot with headless mode
     vb.gui = true
-    vb.name = "w2k12test-berkshelf"
+    vb.name = "w2k12r2-berkshelf"
     vb.memory = 1024
     vb.cpus = 1
   end
